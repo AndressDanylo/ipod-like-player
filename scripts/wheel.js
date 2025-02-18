@@ -6,21 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeIndex = -1; // Track which div is currently highlighted
 
   const wheel = document.getElementById("wheel");
-
-  // Create test divs
-  const debugContainer = document.getElementById("wheel");
-  for (let i = 0; i < 5; i++) {
-      const debugDiv = document.createElement("div");
-      debugDiv.classList.add("debug_div");
-      debugDiv.style.width = "100px";
-      debugDiv.style.height = "50px";
-      debugDiv.style.marginTop = "10px";
-      debugDiv.style.backgroundColor = "blue";
-      debugContainer.appendChild(debugDiv);
-  }
-
-  // Get all divs as an array
-  const debugDivs = Array.from(document.getElementsByClassName("debug_div"));
+  
 
   function getAngle(x, y, centerX, centerY) {
       return Math.atan2(y - centerY, x - centerX) * (180 / Math.PI);
